@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@media (prefers-color-scheme: dark) {
+     :root {
+        --background: #222;
+        --contrastColor: #333333;
+        --fontColor: #f2f2f2;
+        --fontContrastColor: #f2f2f2;
+        --blueishPurple: #6c63ff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        --background: #222;
+        --contrastColor: #f2f2f2;
+        --fontColor: #222;
+        --fontContrastColor: #f2f2f2;
+        --blueishPurple: #6c63ff;
+    }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: var(--fontContrastColor);
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.logo {
+    width: 290px;
+    height: auto;
+    fill: var(--fontColor)
+}
+
+section {
+    width: 60%;
+    position: relative;
+}
+
+form {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: var(--contrastColor);
+    border-radius: 5px;
+}
+
+fieldset {
+    width: 45%;
+}
+
+.form-img {
+    width: 290px;
+    height: auto;
+}
+
+.input-group {
+    margin: 25px auto;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    font-size: .8em;
+    pointer-events: none;
+    color: var(--fontColor);
+    padding: 5px 10px;
+    transition: font-size 0.2s, top 0.2s, padding 0.2s;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: #6c63ff solid 3px;
+    padding: 5px 10px;
+    color: var(--fontColor);
+}
+
+.input-group:first-child label,
+.input-group:first-child input {
+    padding-left: 30px;
+}
+
+input:first-child:focus+label,
+input:first-child:not(:invalid)+label {
+    padding-left: 0px;
+}
+
+.input-group:first-child::before {
+    content: "R$";
+    padding-left: 5px;
+    color: var(--blueishPurple);
+    position: absolute;
+    bottom: 7px;
+}
+
+input:focus+label,
+input:not(:invalid)+label {
+    font-size: 0.7em;
+    position: absolute;
+    top: -15px;
+    padding: 0;
+}
+
+form button {
+    float: right;
+    background-color: var(--blueishPurple);
+    color: var(--fontColor);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input:invalid {
+    border-color: tomato;
+}
+
+#results {
+    z-index: -10;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: var(--contrastColor);
+    width: 100%;
+    height: 373px;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+#results div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#results span {
+    font-size: 1.5em;
+    color: var(--blueishPurple);
+}
+
+#results span sub {
+    font-size: .6em;
+    color: var(--blueishPurple);
+}
+
+#results a {
+    display: block;
+    font-size: .5em;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 40px;
+    color: var(--fontColor);
+}
+
+#contact {
+    height: 35px;
+    padding: 10px 50px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--blueishPurple);
+}

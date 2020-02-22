@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Freela - He4rtDevs</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <div>
-      <h1>Olá mundo.</h1>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <a href="www.he4rtdevs.com">
+        <img src="imgs/gQNRPaj.svg" class="logo">
+    </a>
+    <section>
+        <h1>Calculadora Freela</h1>
+        <form onsubmit="handleSubmit">
+            <img src="imgs/undraw_credit_card_payment_12va.svg" class="form-img" />
+            <fieldset>
+                <div class="input-group">
+                    <input type="number" name="valorProjeto" step="0.01" id="valorProjeto" required>
+                    <label>Valor total do projeto</label>
+                </div>
+                <div class="input-group ">
+                    <input type="number " name="horasDiarias" step="0.01" id="horasDiarias" required>
+                    <label>Quantidade de horas trabalhadas por dia</label>
+                </div>
+                <div class="input-group ">
+                    <input type="number " name="diasEfetivos" id="diasEfetivos" required>
+                    <label>Dias efetivos trabalhados na semana</label>
+                </div>
+                <div class="input-group ">
+                    <input type="number " name="diasFerias" id="diasFerias" required>
+                    <label>Dias de férias pelo projeto</label>
+                </div>
+                <button>Calcular</button>
+            </fieldset>
+        </form>
+        <div id="results">
+            <img src="imgs/undraw_pay_online_b1hk.svg" class="form-img" />
+            <div>
+                <span id="earnings">R$ 1999,99 <sub>/hr</sub></span>
+                <a id="reset">Calcular novamente</a>
+            </div>
+        </div>
+    </section>
+    <div id="contact">
+        Hit me up!
     </div>
-    <script src="./main.js"></script>
-  </body>
+    <script src="./main.js "></script>
+</body>
+
 </html>
