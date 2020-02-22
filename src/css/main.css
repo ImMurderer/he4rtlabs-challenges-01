@@ -145,6 +145,10 @@ input:invalid {
     border-color: tomato;
 }
 
+#results img {
+    width: 50%;
+}
+
 #results {
     z-index: -10;
     position: absolute;
