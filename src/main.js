@@ -16,6 +16,7 @@ const handleSubmit = e => {
     diasFerias * diasEfetivos * horasDiarias;
   document.querySelector("#earnings").innerHTML = `R$ ${valorHora.toFixed(2)}`;
   resultsPage.style.zIndex = 10;
+  formPage.style.visibility = "hidden"
   resultsPage.style.visibility = "visible";
 };
 formPage.addEventListener("submit", handleSubmit);
@@ -24,4 +25,6 @@ document
   .addEventListener("change", formatCurrency);
 document.querySelector("#reset").addEventListener("click", e => {
   resultsPage.style.zIndex = -10;
+  resultsPage.style.visibility = "hidden";
+  formPage.style.visibility = "visible";
 });

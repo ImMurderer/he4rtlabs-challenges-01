@@ -75,6 +75,7 @@ form {
     display: flex;
     padding: 50px;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--contrastColor);
     border-radius: 5px;
 }
@@ -86,6 +87,11 @@ fieldset {
 .form-img {
     width: 290px;
     height: auto;
+}
+
+.form-img p {
+    color: var(--fontColor);
+    text-align: center;
 }
 
 .input-group {
