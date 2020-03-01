@@ -10,7 +10,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-     :root {
+    :root {
         --background: #222;
         --contrastColor: #f2f2f2;
         --fontColor: #222;
@@ -19,7 +19,6 @@
     }
 }
 
-
 /* Chrome, Safari, Edge, Opera */
 
 input::-webkit-outer-spin-button,
@@ -27,6 +26,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 
 
 /* Firefox */
@@ -49,7 +49,7 @@ input[type=number] {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
@@ -59,7 +59,11 @@ body {
 .logo {
     width: 290px;
     height: auto;
-    fill: var(--fontColor)
+    fill: var(--fontColor);
+    position: fixed;
+    top: 0;
+    left: calc(50% - 145px);
+    z-index: 11;
 }
 
 section {
@@ -92,6 +96,7 @@ fieldset {
 .input-group label {
     position: absolute;
     left: 0;
+    top: 0;
     font-size: .8em;
     pointer-events: none;
     color: var(--fontColor);
@@ -120,9 +125,10 @@ input:first-child:not(:invalid)+label {
 .input-group:first-child::before {
     content: "R$";
     padding-left: 5px;
+    top: 2px;
     color: var(--blueishPurple);
     position: absolute;
-    bottom: 7px;
+    bottom: 9px;
 }
 
 input:focus+label,
@@ -136,7 +142,7 @@ input:not(:invalid)+label {
 form button {
     float: right;
     background-color: var(--blueishPurple);
-    color: var(--fontColor);
+    color: var(--fontContrastColor);
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -154,6 +160,7 @@ input:invalid {
     position: absolute;
     top: 30px;
     left: 0;
+    visibility: hidden;
     display: flex;
     padding: 50px;
     justify-content: space-between;
@@ -164,7 +171,7 @@ input:invalid {
     font-size: 1.5em;
 }
 
-#results div {
+#results > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,12 +179,12 @@ input:invalid {
     width: 50%;
 }
 
-#results span {
+#earnings{
     font-size: 1.5em;
     color: var(--blueishPurple);
 }
 
-#results span sub {
+#results sub {
     font-size: .6em;
     color: var(--blueishPurple);
 }
@@ -194,8 +201,72 @@ input:invalid {
 }
 
 #contact {
-    height: 35px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: -40px;
+    left: calc(50%-85px);
+    height: 75px;
     padding: 10px 50px;
     border-radius: 5px 5px 0 0;
     background-color: var(--blueishPurple);
+    transition: bottom .5s;
+    z-index: 11;
+}
+#contact-icons {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    width: 150%;
+}
+.icon {
+    font-size: 2em;
+}
+#contact:hover {
+    bottom: 0;
+}
+
+
+
+@media screen and (max-width:1100px) {
+    body {
+        overflow: scroll;
+    }
+    section {
+        width: 100%;
+        margin-top: 200px;
+    }
+    form {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    fieldset button {
+        float: right;
+        margin-right: 16px;
+    }
+    fieldset {
+        width: 100%;
+    }
+    .input-group label {
+        top:0px;
+    }
+    .input-group:first-child::before {
+        top: 2px;
+    }
+    #results img {
+        width: 100%;
+    }
+    
+    #results {
+        flex-direction: column;
+        height:100vh;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #results > div {
+        width: 100%;    
+    }
 }
