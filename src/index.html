@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Freela - He4rtDevs</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://kit.fontawesome.com/d7b8f82731.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/d7b8f82731.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <a href="https://www.he4rtdevs.com">
-        <img src="imgs/gQNRPaj.svg" class="logo">
+      <img src="imgs/gQNRPaj.svg" class="logo" />
     </a>
     <section>
-        <h1>Calculadora Freela</h1>
-        <form onsubmit="handleSubmit">
-            <div class="form-img">
-                <img src="imgs/undraw_credit_card_payment_12va.svg" width="100%"/>
-                <p>
-                    O projeto tem a finalidade de descrever alguns fatores determinantes para
-                    você saber o seu valor da sua hora em um freelance. Essas quatro variáveis,
-                    vão definir um bom jeito de você cotar alguns de seus trabalhos até você
-                    começar a ter uma noção maior do que fazer nesses momentos.
-                </p>
-            </div>
-            <fieldset>
-                <div class="input-group">
-                    <input type="number" name="valorProjeto" step="0.01" id="valorProjeto" required>
-                    <label>Valor total do projeto</label>
-                </div>
-                <div class="input-group ">
-                    <input type="number " name="horasDiarias" step="0.01" id="horasDiarias" required>
-                    <label>Quantidade de horas trabalhadas por dia</label>
-                </div>
-                <div class="input-group ">
-                    <input type="number " name="diasEfetivos" id="diasEfetivos" required>
-                    <label>Dias efetivos trabalhados na semana</label>
-                </div>
-                <div class="input-group ">
-                    <input type="number " name="diasFerias" id="diasFerias" required>
-                    <label>Dias de férias pelo projeto</label>
-                </div>
-                <button>Calcular</button>
-            </fieldset>
-        </form>
-        <div id="results">
-            <img src="imgs/undraw_pay_online_b1hk.svg" class="form-img" />
-            <div>
-                <div><span id="earnings">R$ 1999,99</span><sub>/hr</sub></div>
-                <a id="reset">Calcular novamente</a>
-            </div>
+      <h1>Calculadora Freela</h1>
+      <form onsubmit="handleSubmit">
+        <div class="form-img">
+          <img src="imgs/undraw_credit_card_payment_12va.svg" width="100%" />
+          <p>
+            O projeto tem a finalidade de descrever alguns fatores determinantes
+            para você saber o seu valor da sua hora em um freelance. Essas
+            quatro variáveis, vão definir um bom jeito de você cotar alguns de
+            seus trabalhos até você começar a ter uma noção maior do que fazer
+            nesses momentos.
+          </p>
         </div>
+        <fieldset>
+          <div class="input-group">
+            <input
+              type="number"
+              name="valorProjeto"
+              step="0.01"
+              id="valorProjeto"
+              required
+              autocomplete="off"
+            />
+            <label>Valor total do projeto</label>
+          </div>
+          <div class="input-group ">
+            <input
+              type="number "
+              name="horasDiarias"
+              step="0.01"
+              id="horasDiarias"
+              required
+              autocomplete="off"
+            />
+            <label>Quantidade de horas trabalhadas por dia</label>
+          </div>
+          <div class="input-group ">
+            <input
+              type="number "
+              name="diasEfetivos"
+              id="diasEfetivos"
+              required
+              autocomplete="off"
+            />
+            <label>Dias efetivos trabalhados na semana</label>
+          </div>
+          <div class="input-group ">
+            <input
+              type="number "
+              name="diasFerias"
+              id="diasFerias"
+              required
+              autocomplete="off"
+            />
+            <label>Dias de férias pelo projeto</label>
+          </div>
+          <button>Calcular</button>
+        </fieldset>
+      </form>
+      <div id="results">
+        <img src="imgs/undraw_pay_online_b1hk.svg" class="form-img" />
+        <div>
+          <div><span id="earnings">R$ 1999,99</span><sub>/hr</sub></div>
+          <a id="reset">Calcular novamente</a>
+        </div>
+      </div>
     </section>
     <div id="contact">
-        Hit me up!
-        <div id="contact-icons">
-            <a class="icon" href="https://twitter.com/immurdererr1?ref_src=twsrc%5Etfw" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a>
-            <a class="icon" href="https://www.github.com/immurderer" target="_blank"><i class="fab fa-github"></i></a>
-            <a class="icon" href="https://www.linkedin.com/in/joao-pedro-prado-36532494/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+      Hit me up!
+      <div id="contact-icons">
+        <a
+          class="icon"
+          href="https://twitter.com/immurdererr1?ref_src=twsrc%5Etfw"
+          target="_blank"
+          rel="noreferrer"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="icon" href="https://www.github.com/immurderer" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          class="icon"
+          href="https://www.linkedin.com/in/joao-pedro-prado-36532494/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
     </div>
     <script src="./main.js "></script>
-</body>
-
+  </body>
 </html>
